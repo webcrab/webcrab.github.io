@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Phillip Fickl</title>
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+        <style>
+            .clear-margin {
+  margin: 0;
+}
+.space-top {
+  margin-top: 10px;
+}
+.icon-left {
+  margin-right: 5px;
+}
+.icon-right {
+  margin-left: 5px;
+}
+.labels {
+  word-spacing: 5px;
+}
+.label-keyword {
+  display: inline-block;
+  background: #7eb0db;
+  color: white;
+  font-size: 0.9em;
+  padding: 5px;
+  border: 1px solid #357ebd;
+}
+body {
+  font-family: 'Lato';
+  background: #f0f0f0;
+  color: #333333;
+}
+.main {
+  padding: 5px;
+}
+.card {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  min-height: 300px;
+  padding: 10px;
+}
+.card-nested {
+  min-height: 0;
+  margin-bottom: 10px;
+  border-width: 1px 0 0 0;
+}
+.background-card {
+  padding: 10px 20px;
+}
+.card-wrapper {
+  padding: 5px;
+}
+.text-bolder {
+  font-weight: bold;
+}
+.background-details .detail {
+  display: table;
+  padding: 10px 0;
+}
+.background-details .detail .icon {
+  min-width: 45px;
+  max-width: 45px;
+  text-align: center;
+}
+.background-details .detail .info {
+  width: 100%;
+}
+.background-details .detail .title,
+.background-details .detail .icon {
+  color: #707070;
+}
+.background-details .detail .icon,
+.background-details .detail .info {
+  display: table-cell;
+  padding: 0 10px;
+}
+.info .content.has-sidebar {
+  width: 80%;
+  box-sizing: border-box;
+  float: left;
+  padding: 0 10px;
+  border-right: 1px solid #cdcdcd;
+}
+.info .sidebar {
+  margin-left: 80%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.profile-pic {
+  padding: 20px 0;
+}
+.contact-details .detail {
+  display: table;
+  padding: 10px 0;
+}
+.contact-details .detail .icon {
+  padding: 0 10px;
+  color: #707070;
+}
+.contact-details .detail .info {
+  font-size: 0.8em;
+}
+.contact-details .detail .icon,
+.contact-details .detail .info {
+  display: table-cell;
+  vertical-align: middle;
+}
+.social-link {
+  margin-left: 5px;
+}
+.social-link:first-child {
+  margin-left: 0;
+}
+.social-link:hover {
+  text-decoration: none;
+}
+.link-github {
+  color: #454545;
+}
+.link-github:hover {
+  color: #2b2b2b;
+}
+.link-twitter {
+  color: #33ccff;
+}
+.link-twitter:hover {
+  color: #00bfff;
+}
+.link-blog {
+  color: #f36f24;
+}
+.link-blog:hover {
+  color: #d8560c;
+}
+.link-linkedin {
+  color: #007bb6;
+}
+.link-linkedin:hover {
+  color: #005983;
+}
+.link-skype {
+  color: #12a5f4;
+}
+.link-skype:hover {
+  color: #0986ca;
+}
+.card-skills {
+  position: relative;
+}
+.skill-level {
+  border-radius: 3px;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  width: 10px;
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.2);
+}
+.skill-level .skill-progress {
+  position: absolute;
+  border-radius: 3px;
+  bottom: 0;
+  width: 100%;
+  -webkit-transition: height 1s ease;
+}
+.skill-level .skill-progress.beginner {
+  height: 50%;
+  background: #e74c3c;
+}
+.skill-level .skill-progress.intermediate {
+  height: 70%;
+  background: #f1c40f;
+}
+.skill-level .skill-progress.advanced {
+  height: 80%;
+  background: #428bca;
+}
+.skill-level .skill-progress.master {
+  height: 95%;
+  background: #5cb85c;
+}
+.skill-info {
+  margin-left: 10px;
+}
+
+        </style>
+    </head>
+
+    <body>
+        <script>
+            window.onload = function () {
+                $( ".background-card" ).css( "min-height", window.screen.availHeight + "px" );
+                $( ".js-tooltip" ).tooltip();
+            }
+        </script>
+        <div class="container">
+            <div class="row main clearfix">
+                <section class="col-xs-12 col-sm-3 col-md-3 card-wrapper">
+                    <div class="card profile-card">
+                        <div class="profile-pic">
+                            <img class="media-object img-circle center-block"  data-src="holder.js/64x64"
+                                alt="64x64" src="http://www.gravatar.com/avatar/bf9e842ce435c8d842e3629bda35717b?s=100&amp;r=pg&amp;d=mm" style="width: 100px; height: 100px;">
+                        </div>
+                            <h3 class="text-center text-bolder"> Phillip Fickl</h3>
+                            <h5 class="text-muted text-center">Entrepreneur</h5>
+                            <hr>
+
+                            <div class="contact-details clearfix">
+
+                                    <div class="detail">
+                                        <span class="icon">
+                                            <i class="fa fa-lg fa-location-arrow"></i>
+                                        </span>
+
+                                            <span class="info">
+                                                Sobieskigasse 29/3/43<br>
+                                                1090 Wien, 
+                                                AT
+                                            </span>
+                                    </div>
+
+                                    <div class="detail">
+                                        <span class="icon">
+                                            <i class="fa fa-lg fa-phone"></i>
+                                        </span>
+
+                                        <span class="info">
+                                            +43 664 342 94 90
+                                        </span>
+                                    </div>
+
+                                    <div class="detail">
+                                        <span class="icon">
+                                            <i class="fa fa-lg fa-envelope"></i>
+                                        </span>
+
+                                        <span class="info">
+                                            phillip@fickl.at
+                                        </span>
+                                    </div>
+
+                                    <div class="detail">
+                                        <span class="icon" title="Sprachen">
+                                            <i class="fa fa-lg fa-language"></i>
+                                        </span>
+
+                                        <span class="info">
+                                            Deutsch, Englisch
+                                        </span>
+                                    </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="social-links text-center">
+                                    <a class="fa fa-xing fa-2x social-link link-xing"
+                                           href="https://www.xing.com/profile/Phillip_Fickl" target="_blank"></a>
+                                    <a class="fa fa-github fa-2x social-link link-github"
+                                           href="http://www.github.com/webcrab" target="_blank"></a>
+                                    <a class="fa fa-rss fa-2x social-link link-blog"
+                                           href="http://phillip.fickl.at" target="_blank"></a>
+                            </div>
+                    </div>
+                </section>
+
+                <section class="col-xs-12 col-sm-9 col-md-9 card-wrapper">
+                    <div class="card background-card">
+                        <h4 class="text-uppercase text-bolder">Lebenslauf</h4>
+                        <hr>
+
+                        <div class="background-details">
+                            <div class="detail">
+                                <div class="icon">
+                                    <i class="fa fa-lg fa-user"></i>
+                                </div>
+                                <div class="info">
+                                    <h4 class="title text-uppercase">
+                                        About
+                                    </h4>
+
+                                    <div class="content">
+                                        Ich bin ein dynamischer, junger Entrepreneur, der mit einem breiten Wissensspektrum, umfangreichen Interessen und nicht zuletzt einer gehörigen Portion Motivation ausgestattet ist. Im Team oder alleine - durch meinen Beruf als Unternehmer habe ich gelernt, mit jeder Herrausforderung fertigzuwerden. Meine Wissbegier und ständige Bereitschaft, etwas neues zu lernen, sind der Grund für ein Studium an der Technischen Universität Wien.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="detail">
+                                <div class="icon">
+                                    <i class="fa fa-lg fa-building"></i>
+                                </div>
+                                <div class="info">
+                                    <h4 class="title text-uppercase">
+                                        Arbeit
+                                    </h4>
+
+                                    <ul class="list-unstyled">
+                                            <li class="card card-nested clearfix">
+                                                <div class="content has-sidebar">
+                                                    <p><strong>Geschäftsführung</strong> @ webcrab e.U.
+                                                    <br><a href="http://webcrab.at">http://webcrab.at</a>
+                                                    </p>
+                                                    <p>Webdevelopment, IT-Consulting, Design, Netzwerke, Hosting. Kunden reichen von Start-Ups, über öffentliche Institutionen, bis hin zu international tätigen Konzernen.</p>
+                                                        <ul>
+                                                                <li> Drei freiberufliche Mitarbeiter zur Unterstützung bei Entwicklung, Systemadministration und Organisation. </li>
+                                                                <li> Büro in 1020 Wien </li>
+                                                        </ul>
+                                                </div>
+
+                                                <div class="sidebar text-muted text-center">
+                                                    <p>
+                                                        <strong>Seit:</strong>&nbsp;
+                                                        August 2011
+                                                    </p>
+                                                    <p>
+                                                            <span class="label label-success">
+                                                                Angehend
+                                                            </span>
+                                                    </p>
+                                                    <p>
+                                                        <i class="fa fa-clock-o icon-left"></i>
+                                                        3 Jahre 2 Monate
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="card card-nested clearfix">
+                                                <div class="content has-sidebar">
+                                                    <p><strong>Leiter Systementwicklung</strong> @ BTM|Energy
+                                                    <br><a href="http://btm.or.at">http://btm.or.at</a>
+                                                    </p>
+                                                    <p>Custom Application Development; IT-Consulting</p>
+                                                </div>
+
+                                                <div class="sidebar text-muted text-center">
+                                                    <p>
+                                                        <strong>Seit:</strong>&nbsp;
+                                                        März 2014
+                                                    </p>
+                                                    <p>
+                                                            <span class="label label-success">
+                                                                Angehend
+                                                            </span>
+                                                    </p>
+                                                    <p>
+                                                        <i class="fa fa-clock-o icon-left"></i>
+                                                        7 Monate
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="card card-nested clearfix">
+                                                <div class="content has-sidebar">
+                                                    <p><strong>Technischer Kontakt, Entwickler</strong> @ Team-i Zeitschriftenverlag GmbH
+                                                    <br><a href="http://i-magazin.at">http://i-magazin.at</a>
+                                                    </p>
+                                                    <p>Design und Entwicklung der Webseite; IT; Netzwerk</p>
+                                                </div>
+
+                                                <div class="sidebar text-muted text-center">
+                                                    <p>
+                                                        <strong>Seit:</strong>&nbsp;
+                                                        Februar 2010
+                                                    </p>
+                                                    <p>
+                                                            <strong>Bis:</strong>&nbsp;
+                                                            Juli 2011
+                                                    </p>
+                                                    <p>
+                                                        <i class="fa fa-clock-o icon-left"></i>
+                                                        1 Jahr 6 Monate
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="card card-nested clearfix">
+                                                <div class="content has-sidebar">
+                                                    <p><strong>Ferialpraktikant</strong> @ Alcatel-Lucent Austria AG
+                                                    </p>
+                                                    <p>Grafische Anpassung und Übersetzung der Weboberfläche einer Geräteserie an das Design der Telekom Austria; Programmieren eines Konfigurationstools für ebendiese</p>
+                                                </div>
+
+                                                <div class="sidebar text-muted text-center">
+                                                    <p>
+                                                        <strong>Seit:</strong>&nbsp;
+                                                        August 2009
+                                                    </p>
+                                                    <p>
+                                                            <strong>Bis:</strong>&nbsp;
+                                                            August 2009
+                                                    </p>
+                                                    <p>
+                                                        <i class="fa fa-clock-o icon-left"></i>
+                                                        1 Monat
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="card card-nested clearfix">
+                                                <div class="content has-sidebar">
+                                                    <p><strong>Ferialpraktikant</strong> @ LEICA Mikrosysteme Handelsgesellschaft m.b.H.
+                                                    </p>
+                                                    <p>Programmieren einer Fehlerdatenbank</p>
+                                                </div>
+
+                                                <div class="sidebar text-muted text-center">
+                                                    <p>
+                                                        <strong>Seit:</strong>&nbsp;
+                                                        Juli 2008
+                                                    </p>
+                                                    <p>
+                                                            <strong>Bis:</strong>&nbsp;
+                                                            Juli 2008
+                                                    </p>
+                                                    <p>
+                                                        <i class="fa fa-clock-o icon-left"></i>
+                                                        1 Monat
+                                                    </p>
+                                                </div>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="detail">
+                                <div class="icon">
+                                    <i class="fa fa-lg fa-mortar-board"></i>
+                                </div>
+                                <div class="info">
+                                    <h4 class="title text-uppercase">
+                                        Ausbildung
+                                    </h4>
+
+                                    <div class="content">
+                                        <ul class="list-unstyled">
+                                                <li class="card card-nested">
+                                                    <div class="content has-sidebar">
+                                                        <p>
+                                                            <strong>Software Engineering</strong> @ Technische Universität Wien<br>
+                                                        Bachelor
+                                                        </p>
+                                                        <p>
+                                                        Notendurchschnitt: 
+                                                        </p>
+                                                        <div class="space-top labels">
+                                                        </div>
+                                                    </div>
+                                                    <div class="sidebar text-muted text-center">
+                                                        <p>
+                                                            <strong>Begonnen:</strong>&nbsp;
+                                                            Oktober 2012
+                                                        </p>
+                                                        <p>
+                                                                <span class="label label-success">
+                                                                    Angehendes Studium
+                                                                </span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="card card-nested">
+                                                    <div class="content has-sidebar">
+                                                        <p>
+                                                            <strong>Elektronische Datenverarbeitung und Organisation</strong> @ htl donaustadt<br>
+                                                        Matura mit ausgezeichnetem Erfolg
+                                                        </p>
+                                                        <p>
+                                                        Notendurchschnitt: 
+                                                        </p>
+                                                        <div class="space-top labels">
+                                                        </div>
+                                                    </div>
+                                                    <div class="sidebar text-muted text-center">
+                                                        <p>
+                                                            <strong>Begonnen:</strong>&nbsp;
+                                                            September 2006
+                                                        </p>
+                                                        <p>
+                                                                <strong>Beendet:</strong>&nbsp;
+                                                                Juni 2011
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="detail">
+                                <div class="icon">
+                                    <i class="fa fa-lg fa-code"></i>
+                                </div>
+                                <div class="info">
+                                    <h4 class="title text-uppercase">
+                                        Skills
+                                    </h4>
+
+                                    <div class="content">
+                                        <ul class="list-unstyled">
+                                                <li class="card card-nested card-skills">
+                                                    <div class="skill-info">
+                                                        <strong>Web Development</strong>
+
+                                                        <div class="space-top labels">
+                                                                <span class="label label-keyword">HTML</span>
+                                                                <span class="label label-keyword">CSS</span>
+                                                                <span class="label label-keyword">Javascript</span>
+                                                                <span class="label label-keyword">PHP</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="card card-nested card-skills">
+                                                    <div class="skill-info">
+                                                        <strong>Application Development</strong>
+
+                                                        <div class="space-top labels">
+                                                                <span class="label label-keyword">Java</span>
+                                                                <span class="label label-keyword">.NET</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="card card-nested card-skills">
+                                                    <div class="skill-info">
+                                                        <strong>IT</strong>
+
+                                                        <div class="space-top labels">
+                                                                <span class="label label-keyword">Infrastruktur</span>
+                                                                <span class="label label-keyword">Netzwerk</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="card card-nested card-skills">
+                                                    <div class="skill-info">
+                                                        <strong>Sonstiges</strong>
+
+                                                        <div class="space-top labels">
+                                                                <span class="label label-keyword">Ausbildung zur Sicherheitsvertrauensperson</span>
+                                                                <span class="label label-keyword">Führerschein A, B</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                                <div class="detail">
+                                    <div class="icon">
+                                        <i class="fa fa-lg fa-trophy"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h4 class="title text-uppercase">
+                                            Awards
+                                        </h4>
+
+                                        <div class="content">
+                                            <ul class="list-unstyled">
+                                                    <li class="card card-nested">
+                                                        <div class="content has-sidebar">
+                                                            <p>
+                                                                <strong>Nominierung Constantinus Award</strong>,&nbsp;
+                                                                Constantinus Club - Verein für die Förderung von österreichischen Beratungs-, IT- und Dienstleistungen
+                                                            </p>
+                                                            <p class="clear-margin"> Mit dem Projekt &quot;ista VDM&quot; als Teil von BTM für das innovativste Produkt in der Kategorie &quot;Informationstechnologie&quot; nominiert. </p>
+                                                        </div>
+                                                        <div class="sidebar text-muted text-center">
+                                                            <p>
+                                                                <strong>Verliehen am:</strong>&nbsp;
+                                                                Mai 01, 2014
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="detail">
+                                    <div class="icon">
+                                        <i class="fa fa-lg fa-child"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h4 class="title text-uppercase">
+                                            Unentgeltliche und freiwillige Arbeit
+                                        </h4>
+
+                                        <div class="content">
+                                            <ul class="list-unstyled">
+                                                    <li class="card card-nested">
+                                                        <div class="content has-sidebar">
+                                                            <p>
+                                                                <strong>Initiator</strong> @ startup (idea) of the day
+                                                                <br><a href="http://sotd.at">http://sotd.at</a>
+                                                            </p>
+                                                            <p>Eine Gruppe, die einfach Spaß daran hat, jede mehr oder weniger sinnvolle Idee für ein Start-Up zu besprechen, bewerten und niederzuschreiben. Noch in der Entstehungsphase.</p>
+                                                            <ul>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="sidebar text-muted text-center">
+                                                            <p>
+                                                                <strong>Seit:</strong>&nbsp;
+                                                                Oktober 2014
+                                                            </p>
+                                                            <p>
+                                                                    <span class="label label-success">
+                                                                        Bis jetzt
+                                                                    </span>
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/tooltip.min.js"></script>
+    </body>
+</html>
