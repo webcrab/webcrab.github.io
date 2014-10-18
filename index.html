@@ -22,9 +22,6 @@
 .icon-right {
   margin-left: 5px;
 }
-.labels {
-  word-spacing: 5px;
-}
 .label-keyword {
   display: inline-block;
   background: #7eb0db;
@@ -32,6 +29,8 @@
   font-size: 0.9em;
   padding: 5px;
   border: 1px solid #357ebd;
+  font-weight: inherit;
+  border-radius: 0;
 }
 body {
   font-family: 'Lato';
@@ -46,15 +45,18 @@ body {
   border: 1px solid #e6e6e6;
   border-radius: 3px;
   min-height: 300px;
+}
+.profile-card {
   padding: 10px;
 }
 .card-nested {
   min-height: 0;
   margin-bottom: 10px;
+  padding: 10px 0;
   border-width: 1px 0 0 0;
 }
 .background-card {
-  padding: 10px 20px;
+  padding: 10px;
 }
 .card-wrapper {
   padding: 5px;
@@ -81,19 +83,27 @@ body {
 .background-details .detail .icon,
 .background-details .detail .info {
   display: table-cell;
-  padding: 0 10px;
+  padding: 0 5px;
 }
 .info .content.has-sidebar {
   width: 80%;
   box-sizing: border-box;
   float: left;
-  padding: 0 10px;
-  border-right: 1px solid #cdcdcd;
+  padding-right: 10px;
 }
 .info .sidebar {
   margin-left: 80%;
   box-sizing: border-box;
   padding: 10px;
+}
+@media (min-width: 768px) {
+  .background-details .icon,
+  .background-details .info {
+    padding: 0 10px;
+  }
+  .background-card {
+    padding: 10px 20px;
+  }
 }
 .profile-pic {
   padding: 20px 0;
@@ -103,7 +113,7 @@ body {
   padding: 10px 0;
 }
 .contact-details .detail .icon {
-  padding: 0 10px;
+  padding: 0 5px;
   color: #707070;
 }
 .contact-details .detail .info {
@@ -196,12 +206,6 @@ body {
     </head>
 
     <body>
-        <script>
-            window.onload = function () {
-                $( ".background-card" ).css( "min-height", window.screen.availHeight + "px" );
-                $( ".js-tooltip" ).tooltip();
-            }
-        </script>
         <div class="container">
             <div class="row main clearfix">
                 <section class="col-xs-12 col-sm-3 col-md-3 card-wrapper">
@@ -286,7 +290,7 @@ body {
                                     </h4>
 
                                     <div class="content">
-                                        Ich bin ein dynamischer, junger Entrepreneur, der mit einem breiten Wissensspektrum, umfangreichen Interessen und nicht zuletzt einer gehörigen Portion Motivation ausgestattet ist. Im Team oder alleine - durch meinen Beruf als Unternehmer habe ich gelernt, mit jeder Herausforderung fertigzuwerden. Meine Wissbegier und ständige Bereitschaft, etwas neues zu lernen, sind der Grund für ein Studium an der Technischen Universität Wien.
+                                        Ich bin ein dynamischer, junger Entrepreneur, der mit einem breiten Wissensspektrum, umfangreichen Interessen und nicht zuletzt einer gehörigen Portion Motivation ausgestattet ist. Im Team oder alleine - durch meinen Beruf als Unternehmer habe ich gelernt, mit jeder Herausforderung fertigzuwerden. Meine Wissbegier und ständige Bereitschaft, etwas Neues zu lernen, sind der Grund für ein Studium an der Technischen Universität Wien.
                                     </div>
                                 </div>
                             </div>
@@ -306,7 +310,7 @@ body {
                                                     <p><strong>Geschäftsführung</strong> @ webcrab e.U.
                                                     <br><a href="http://webcrab.at">http://webcrab.at</a>
                                                     </p>
-                                                    <p>Webdevelopment, IT-Consulting, Design, Netzwerke, Hosting. Kunden reichen von Start-Ups, über öffentliche Institutionen, bis hin zu international tätigen Konzernen.</p>
+                                                    <p>Webdevelopment, IT-Consulting, Design, Netzwerke, Hosting. Kundenstamm reicht von Start-Ups, über öffentliche Institutionen, bis hin zu international tätigen Konzernen.</p>
                                                         <ul>
                                                                 <li> Drei freiberufliche Mitarbeiter zur Unterstützung bei Entwicklung, Systemadministration und Organisation. </li>
                                                                 <li> Büro in 1020 Wien </li>
@@ -315,7 +319,7 @@ body {
 
                                                 <div class="sidebar text-muted text-center">
                                                     <p>
-                                                        <strong>Seit:</strong>&nbsp;
+                                                        <strong>Von:</strong>&nbsp;
                                                         August 2011
                                                     </p>
                                                     <p>
@@ -339,7 +343,7 @@ body {
 
                                                 <div class="sidebar text-muted text-center">
                                                     <p>
-                                                        <strong>Seit:</strong>&nbsp;
+                                                        <strong>Von:</strong>&nbsp;
                                                         März 2014
                                                     </p>
                                                     <p>
@@ -363,7 +367,7 @@ body {
 
                                                 <div class="sidebar text-muted text-center">
                                                     <p>
-                                                        <strong>Seit:</strong>&nbsp;
+                                                        <strong>Von:</strong>&nbsp;
                                                         Februar 2010
                                                     </p>
                                                     <p>
@@ -385,7 +389,7 @@ body {
 
                                                 <div class="sidebar text-muted text-center">
                                                     <p>
-                                                        <strong>Seit:</strong>&nbsp;
+                                                        <strong>Von:</strong>&nbsp;
                                                         August 2009
                                                     </p>
                                                     <p>
@@ -407,7 +411,7 @@ body {
 
                                                 <div class="sidebar text-muted text-center">
                                                     <p>
-                                                        <strong>Seit:</strong>&nbsp;
+                                                        <strong>Von:</strong>&nbsp;
                                                         Juli 2008
                                                     </p>
                                                     <p>
@@ -461,7 +465,7 @@ body {
                                                     <div class="content has-sidebar">
                                                         <p>
                                                             <strong>Elektronische Datenverarbeitung und Organisation</strong> @ htl donaustadt<br>
-                                                        Matura mit ausgezeichnetem Erfolg
+                                                        Matura mit ausgezeichnetem Erfolg bestanden
                                                         </p>
 
                                                         <div class="space-top labels">
@@ -523,6 +527,7 @@ body {
                                                         <div class="space-top labels">
                                                                 <span class="label label-keyword">Infrastruktur</span>
                                                                 <span class="label label-keyword">Netzwerk</span>
+                                                                <span class="label label-keyword">Server</span>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -596,7 +601,7 @@ body {
                                                         </div>
                                                         <div class="sidebar text-muted text-center">
                                                             <p>
-                                                                <strong>Seit:</strong>&nbsp;
+                                                                <strong>Von:</strong>&nbsp;
                                                                 Oktober 2014
                                                             </p>
                                                             <p>
